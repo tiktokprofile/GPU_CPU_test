@@ -48,7 +48,7 @@
 <button id="cancle">បោះបង់</button>
 </div>
 <script>
-alert("តេស្តអនុគមន៍ត្រីកោណមាត្រ និងបញ្ច្រាស បង្កើតដោយ @xougeforce");
+alert("តេស្តអនុគមន៍ត្រីកោណមាត្រ និងបញ្ច្រាស បង្កើតដោយ @xougeforce បើចង់បរិច្ចាកមកខ្ញុំ អាចបង់លុយតាម Truemoney : 016850400");
     var cx, cy;
     var glposition;
     var glright;
@@ -465,10 +465,10 @@ alert("តេស្តអនុគមន៍ត្រីកោណមាត្រ 
         document.getElementById("kernel").value = KERNEL;
         document.getElementById("btn").addEventListener("click", function() {
             var state = this.innerText == "CONFIG";
-            this.innerText = state ? "HIDE" : "CONFIG";
+            this.innerText = state ? "លាក់" : "កំណត់រចនាសម្ព័ន្ធ";
             document.getElementById("config").style.display = state ? "inline" : "none";
         });
-        document.getElementById("apply").addEventListener("click", function() {
+        document.getElementById("អនុវត្ត").addEventListener("click", function() {
             KERNEL = document.getElementById("kernel").value;
             gl.shaderSource(fragshader, FSHADER_SOURCE + KERNEL);
             gl.compileShader(fragshader);
@@ -488,10 +488,11 @@ alert("តេស្តអនុគមន៍ត្រីកោណមាត្រ 
             gly = gl.getUniformLocation(shaderProgram, 'y');
             gllen = gl.getUniformLocation(shaderProgram, 'len');
         });
-        document.getElementById("cancle").addEventListener("click", function() {
+        document.getElementById("បោះបង់").addEventListener("click", function() {
             document.getElementById("kernel").value = KERNEL;
         });
     }
     </script>
 </body>
 </html>
+
